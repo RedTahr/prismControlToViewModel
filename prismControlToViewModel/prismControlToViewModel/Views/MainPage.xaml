@@ -2,13 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-			 xmlns:control="clr-namespace:prismControlToViewModel.Controls;assembly=prismControlViewViewModel"
+			 xmlns:control="clr-namespace:prismControlToViewModel.Controls;assembly=prismControlToViewModel"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="prismControlToViewModel.Views.MainPage"
-             Title="MainPage">
-  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-    <Label Text="{Binding Title}" />
-		<Label Text="Hello world" />
-		<control:ControlThing Things="{Binding BoundThings}" />
-	</StackLayout>
+             Title="{Binding Title}">
+	<ScrollView VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+		<StackLayout>
+			<Label Text="Hello world" />
+			<control:ControlThing Things="{Binding BoundThings}" />
+			<Label Text="Goodbye world" />
+		</StackLayout>
+	</ScrollView>
 </ContentPage>

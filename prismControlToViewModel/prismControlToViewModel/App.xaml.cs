@@ -15,6 +15,8 @@ namespace prismControlToViewModel {
 		protected override void RegisterTypes() {
 			Container.RegisterTypeForNavigation<NavigationPage>();
 			Container.RegisterTypeForNavigation<MainPage>();
+			Container.RegisterTypeForNavigation<NextPage>();
+			Container.RegisterTypeForNavigation<AboutPage>();
 		}
 	}
 }
